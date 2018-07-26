@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'docker pull helloworld'
+                sh 'docker pull hello-world'
                 //docker build -t helloworld .
                 // docker tag helloworld hub.docker.com/ramanareddy4k/dev:helloworld
                 }
