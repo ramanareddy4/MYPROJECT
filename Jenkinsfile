@@ -5,7 +5,6 @@ stage(build)
      steps {     
        checkout scm
        docker build -t helloworld .
-     }
      }      
      stage(publish to docker){
        steps   
