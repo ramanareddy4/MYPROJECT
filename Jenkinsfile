@@ -17,9 +17,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                docker login username=ramanareddy4k@gmail.com password=Baaru143@ hub.docker.com
-                docker push hub.docker.com/ramanareddy4k/repo:helloworld
+               // docker login username=ramanareddy4k@gmail.com password=Baaru143@ hub.docker.com
+               // docker push hub.docker.com/ramanareddy4k/repo:helloworld
               } 
-        }
+          }
         }
      }
