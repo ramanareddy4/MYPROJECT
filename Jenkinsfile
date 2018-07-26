@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 checkout scm
-                docker build -t helloworld .
+               // docker build -t helloworld .
            /* }
         }
         stage('Test') {
@@ -22,7 +22,7 @@ pipeline {
             }
         }  */ 
     
-            } 
+          } 
         }
         }
      }
