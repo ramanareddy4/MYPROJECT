@@ -4,10 +4,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-              /*  
-              checkout scm
+                checkout scm
                 docker build -t helloworld .
-            }
+           /* }
         }
         stage('Test') {
             steps {
