@@ -13,7 +13,7 @@ pipeline {
                 echo 'Testing..'
                 sh 'docker pull hello-world'
                 //docker build -t helloworld .
-                sh 'docker tag hello-world hub.docker.com/ramanareddy4k/dev:hello-world'
+                sh 'docker tag hello-world ramanareddy4k/dev:hello-world'
                 }
           }
         stage('Deploy') {
