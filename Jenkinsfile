@@ -6,14 +6,14 @@ pipeline {
                 echo 'Building..'
                 checkout scm
                // docker build -t helloworld .
-           /* }
-        }
+              }
+          }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                docker tag helloworld hub.docker.com/ramanareddy4k/dev:helloworld
-            }
-        }
+               // docker tag helloworld hub.docker.com/ramanareddy4k/dev:helloworld
+           // }
+       // }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
