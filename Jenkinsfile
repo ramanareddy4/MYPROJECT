@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'docker login username=ramanareddy4k@gmail.com password=Baaru143@ hub.docker.com'
+                sh 'docker login -u ramanareddy4k@gmail.com -p Baaru143@ hub.docker.com'
                 sh 'docker push hub.docker.com/ramanareddy4k/dev:hello-world'
               } 
           }
