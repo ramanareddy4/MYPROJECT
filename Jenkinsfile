@@ -10,11 +10,13 @@ pipeline {
           }
         stage('Test') {
             steps {
+                scripts {
                 echo 'Testing..'
                 docker pull helloworld
                 //docker build -t helloworld .
                 // docker tag helloworld hub.docker.com/ramanareddy4k/dev:helloworld
-            }
+                }
+             }
         }
         stage('Deploy') {
             steps {
