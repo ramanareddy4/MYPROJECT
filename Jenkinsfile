@@ -12,7 +12,7 @@ pipeline {
             steps {
                 scripts {
                 echo 'Testing..'
-                docker pull helloworld
+                sh 'docker pull helloworld'
                 //docker build -t helloworld .
                 // docker tag helloworld hub.docker.com/ramanareddy4k/dev:helloworld
                 }
