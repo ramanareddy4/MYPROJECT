@@ -2,8 +2,11 @@
   
 pipeline {
     agent any
-
-    stages {
+  stage('wecome') {
+    steps {
+         echo 'welcome'
+    }
+   /* stages {
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -23,6 +26,6 @@ pipeline {
                 docker login username:ramanareddy4k@gmail.com password:Baaru143@ hub.docker.com
                 docker push hub.docker.com/ramanareddy4k/repo:helloworld
             }
-        }
-    }
+        }  */ 
+    } 
 }
