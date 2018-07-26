@@ -2,15 +2,12 @@
   
 pipeline {
     agent any
-  stage('wecome') {
-    steps {
-         echo 'welcome'
-    }
-   /* stages {
+     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-                checkout scm
+              /*  
+              checkout scm
                 docker build -t helloworld .
             }
         }
