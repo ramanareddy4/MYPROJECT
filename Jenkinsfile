@@ -24,5 +24,8 @@ pipeline {
                 docker push hub.docker.com/ramanareddy4k/repo:helloworld
             }
         }  */ 
-    } 
-}
+    
+            } 
+
+        }
+     }
