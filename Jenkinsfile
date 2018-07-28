@@ -13,14 +13,14 @@ pipeline {
                 echo 'Testing..'
                 sh 'docker pull hello-world'
                 //docker build -t helloworld .
-                sh 'docker tag hello-world ramanareddy4k/dev:hello-world'
+                sh 'docker tag hello-world hub.docker.com/ramanareddy4k/dev:hello-world'
                 }
           }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
                 sh 'docker login -u ramanareddy4k@gmail.com -p Baaru143@ hub.docker.com'
-                sh 'docker push ramanareddy4k/dev:hello-world'
+                sh 'docker push hub.docker.com/ramanareddy4k/dev:hello-world'
               } 
           }
         }
