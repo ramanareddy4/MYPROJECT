@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'docker login -u ramanareddy4k -p Baaru143@'
-                sh 'docker push hub.docker.com/ramanareddy4k/dev:latest'
+                sh 'docker push ramanareddy4k/dev:latest'
               } 
           }
         }
