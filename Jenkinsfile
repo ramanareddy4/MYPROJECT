@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'docker login -u ramanareddy4k -p Baaru143@'
+                sh 'docker login'
                 sh 'docker push ramanareddy4k/dev:test'
               } 
           }
