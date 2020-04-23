@@ -69,12 +69,27 @@ pipeline {
                 }
           }
         stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-                sh 'docker login -u xxxxx -p xxxxx'
-                sh 'docker push ramanareddy4k/dev:test'
-              } 
-          }
+            steps { 
+		script{
+			    if(currentBuild.result == "SUCCESS"){
+                  try{
+					timeout(time: checkout_timeout, unit: 'SECONDS') {
+					echo 'Deploying....'
+					sh 'docker login -u xxxxx -p xxxxx'
+                			sh 'docker push ramanareddy4k/dev:test'
+					success_status('Checkout', mail_to)
+					}
+					}catch (FlowInterruptedException timeout_error){
+						currentBuild.result = 'ABORTED'
+						abort_status('Checkout', mail_to)
+					}
+					catch(Exception err){
+						currentBuild.result = 'FAILURE'
+						failure_status('Checkout', mail_to)
+					}
+					}
+				}
+			}
         }
-     }
+   }
 
