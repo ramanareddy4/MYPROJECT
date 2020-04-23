@@ -1,6 +1,11 @@
 #!groovy
 import org.jenkinsci.plugins.workflow.steps.FlowInterruptedException
 
+def mail_to = 'reddy43k@.com'
+currentBuild.result = 'SUCCESS'
+def checkout_timeout = 300
+def mail_from = 'donotreply@gmail.com'
+
 def getDeploymentEnvironment() {
     if (env.BRANCH_NAME.startsWith('PR-')) {
         return 'development'
