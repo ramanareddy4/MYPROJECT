@@ -1,7 +1,7 @@
 #!groovy
 import org.jenkinsci.plugins.workflow.steps.FlowInterruptedException
 
-def mail_to = 'reddy43k@.com'
+def mail_to = 'reddy43k@gmail.com'
 currentBuild.result = 'SUCCESS'
 def checkout_timeout = 300
 def mail_from = 'donotreply@gmail.com'
