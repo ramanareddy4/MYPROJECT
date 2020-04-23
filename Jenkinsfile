@@ -1,4 +1,5 @@
 #!groovy
+import org.jenkinsci.plugins.workflow.steps.FlowInterruptedException
 
 def getDeploymentEnvironment() {
     if (env.BRANCH_NAME.startsWith('PR-')) {
