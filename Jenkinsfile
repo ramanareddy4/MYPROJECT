@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+      cron( env.BRANCH_NAME.equals('testing') ? '* * * * *' : '')
+      }
      stages {
         stage('Build') {
             steps {
