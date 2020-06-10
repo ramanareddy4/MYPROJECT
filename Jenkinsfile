@@ -44,7 +44,7 @@ def abort_status(stage, mail_to){
 pipeline {
     agent any
      triggers {
-      cron( env.BRANCH_NAME.equals('master') ? '* * * * *' : '')
+      cron( env.BRANCH_NAME.equals('testing') ? '* * * * *' : '')
       }
      stages {
 		stage('Checkout'){
